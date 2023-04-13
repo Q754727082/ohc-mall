@@ -11,9 +11,9 @@ spring:
       filters: stat
       driver-class-name: com.mysql.jdbc.Driver
       #基本属性
-      url: jdbc:mysql://ouhuachao.top:3306/store?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=GMT
+      url: jdbc:mysql://192.168.225.129:3306/store?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=GMT
       username: root
-      password: 754727082!qq
+      password: 123456
       #配置初始化大小/最小/最大
       initial-size: 1
       min-idle: 1
@@ -31,11 +31,12 @@ spring:
       #打开PSCache，并指定每个连接上PSCache的大小。oracle设为true，mysql设为false。分库分表较多推荐设置为false
       pool-prepared-statements: false
       max-pool-prepared-statement-per-connection-size: 20
+
 ## 该配置节点为独立的节点，有很多同学容易将这个配置放在spring的节点下，导致配置无法被识别
 mybatis:
   mapper-locations: classpath:mapper/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
-  type-aliases-package: com.example.shopping.model  # 注意：对应实体类的路径
+  type-aliases-package: com.ohc.model  # 注意：对应实体类的路径
 
 files:
   upload:
-    path: E:/workspace/img/  #存放文件的自定义路径
+    path: D:/workspace/img/  #存放文件的自定义路径

@@ -77,7 +77,7 @@ export default {
   },
   methods: {
     updateStatus(i, e) {
-      let param = { id: e.id, status: e.status == 1 ? 2 : 1 }
+      let param = { id: e.id, status: e.status == 1 ? 0 : 1 }
       this.$confirm(`确定${e.status == 1 ? '下架' : '上架'}该商品, 是否继续?`, '提示', {
         confirmButtonText: '确定',
         cancelButtonText: '取消',
